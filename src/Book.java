@@ -1,18 +1,17 @@
 public class Book {
-    private String name;
-    private String Author;
-    private int date;
-    public Book(String name, String Author, int date){
+    private final String name;
+    private final Author Author;
+    private Integer date;
+    public Book(String name, Author Author, int date){
+
         this.name=name;
-        String[] author=Author.split(" ");
-        Author writer=new Author(author[0],author[1]);
-        this.Author = (writer.getName())+" "+(writer.getSurname());
+        this.Author = Author;
         this.date=date;
     }
     public String getName(){
         return this.name;
     }
-    public String getAuthor(){
+    public Author getAuthor(){
         return this.Author;
     }
     public int getDate(){
